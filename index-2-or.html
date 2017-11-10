@@ -15,9 +15,6 @@
 
   <script type="text/javascript">
 
-
-
-
     //create var alphabet array
     //create var wins, losses and set to 0
     //create var guessesleft and set to 10 (whatever you want)
@@ -34,14 +31,12 @@
 
 
     // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
-    var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    var computerChoices = ["c", "a", "t"];
 
-    // Creating variables to hold the number of wins, losses, guessesLeft and guessesSoFar. They start at 0.
+    // Creating variables to hold the number of wins, losses, and ties. They start at 0.
     var wins = 0;
     var losses = 0;
-    var guessesLeft = 10;
-    var guessesSoFar = [];
-   
+    var ties = 0;
 
     // This function is run whenever the user presses a key.
     document.onkeyup = function(event) {

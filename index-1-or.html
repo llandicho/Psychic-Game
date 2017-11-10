@@ -3,45 +3,23 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Psychic Game</title>
+  <title>Rock Paper Scissors Part 7</title>
 </head>
 
 <body>
 
   <div id="game">
-    <h1>The Psychic Game</h1>
-    <p>Guess what letter I'm thinking of:</p>
+    <p>Press r, p or s to start playing!</p>
   </div>
 
   <script type="text/javascript">
-
-
-
-
-    //create var alphabet array
-    //create var wins, losses and set to 0
-    //create var guessesleft and set to 10 (whatever you want)
-    //create var guessesSoFar and set to empty array
-
-    //create variable set to usersguess
-    //subtract from guess left
-    //add guess to guessesSoFar
-    //create variable set to computerGuess
-      //if userguess and computer are the same
-        //win
-      //if userguess is not the same as computerguess
-        //lose
-
-
     // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
-    var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    var computerChoices = ["r", "p", "s"];
 
-    // Creating variables to hold the number of wins, losses, guessesLeft and guessesSoFar. They start at 0.
+    // Creating variables to hold the number of wins, losses, and ties. They start at 0.
     var wins = 0;
     var losses = 0;
-    var guessesLeft = 10;
-    var guessesSoFar = [];
-   
+    var ties = 0;
 
     // This function is run whenever the user presses a key.
     document.onkeyup = function(event) {
@@ -55,7 +33,7 @@
       // Reworked our code from last step to use "else if" instead of lots of if statements.
 
       // This logic determines the outcome of the game (win/loss/tie), and increments the appropriate number
-        if ((userGuess === "r") || (userGuess === "p") || (userGuess === "s")) {
+      if ((userGuess === "r") || (userGuess === "p") || (userGuess === "s")) {
 
         if ((userGuess === "r") && (computerGuess === "s")) {
           wins++;
@@ -75,7 +53,6 @@
 
         // Creating a variable to hold our new HTML. Our HTML now keeps track of the user and computer guesses, and wins/losses/ties.
         var html =
-
           "<p>You chose: " + userGuess + "</p>" +
           "<p>The computer chose: " + computerGuess + "</p>" +
           "<p>wins: " + wins + "</p>" +
