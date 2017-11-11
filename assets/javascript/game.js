@@ -25,28 +25,27 @@
 
         if ((userGuess === "a") && (computerGuess === "a")) {
           wins++;
-        } else if ((userGuess === "b") && (computerGuess === "b")) {
+
+        }
+
+        else if ((userGuess === "b") && (computerGuess === "b")) {
           losses++;
         } 
 
-        else if (userGuess === computerGuess) {
-          wins++;
-        }
-
         else if (guessesLeft <= 10) {
-          guessesLeft--;
+        guessesLeft--;
         }
 
-        else if (userGuess !== computerGuess){
-            guessesSoFar++; //decrementing the guesses left
+        else if (userGuess !== computerGuess) {
+        guessesSoFar++; //decrementing the guesses left
         } 
 
      
-        // Creating a variable to hold our new HTML. Our HTML now keeps track of the user and computer guesses, and wins/losses/ties.
+        // Creating a variable to hold our new HTML. Our HTML now keeps track of the user, computer guesses, and win/loss/guess left/guesses so far.
         var html =
 
           "<p>You chose: " + userGuess + "</p>" +
-          "<p>The computer chose: " + computerGuess + "</p>" +
+          
           "<p>Wins: " + wins + "</p>" +
           "<p>Losses: " + losses + "</p>" +
           "<p>Guesses Left: " + guessesLeft + "</p>" +
