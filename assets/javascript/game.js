@@ -1,5 +1,6 @@
 
-    // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
+
+    // Variables for tracking our win/loss/guess left/guesses so far. They begin at 0.
     
     var computerChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     // Creating variables to hold the number of wins, losses, and ties. They start at 0.
